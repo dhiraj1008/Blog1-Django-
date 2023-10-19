@@ -3,7 +3,7 @@
 
     "builds": [{
 
-        "src": "django_projects/wsgi.py",
+        "src": "django_project1/wsgi.py",
 
         "use": "@vercel/python",
 
@@ -17,7 +17,7 @@
 
             "src": "/(.*)",
 
-            "dest": "django_projects/wsgi.py"
+            "dest": "django_project1/wsgi.py"
 
         }
 
