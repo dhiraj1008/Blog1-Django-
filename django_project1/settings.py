@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-p%f_#(jvt8c#)zie9cwt&s91ce4a3)w053#wltx4ub4%!fi@nh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.now.sh']
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -150,7 +150,7 @@ import os
 EMAIL_HOST_USER = os.environ.get('email_d')
 EMAIL_HOST_PASSWORD = os.environ.get('password_d')
 
-
+"""
 AWS_ACCESS_KEY_ID = 'AKIAWEVPHJVPOMEYBOVC'#os.environ.get("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY ='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'#os.environ.get("AWS_SECRET_ACCESS_KEY")
 AWS_STORAGE_BUCKET_NAME='myblogdjango'
@@ -166,3 +166,4 @@ DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 STATICFILES_STORAGE ="storages.backends.s3boto3.S3Boto3Storage"
 
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+"""
