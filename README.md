@@ -20,7 +20,7 @@ To get started, you will need to install the following:
 
 ### Once you have installed all of the requirements, you can clone this repository and create a virtual environment:
 
-git clone https://github.com/your_username/django-blog-project.git
+git clone https://github.com/dhiraj1008/django_projects.git
 cd django-blog-project
 python3 -m venv env
 source env/bin/activate
