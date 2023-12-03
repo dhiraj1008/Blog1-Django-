@@ -1,0 +1,97 @@
+# Django_Blog1
+
+# Developing full featured web application using django and python
+
+django -> python frame-work for web applications.
+frame-work-> a software frame work is a structure that you can use to build software.it acts as a foundation so you dont have to deal with creating extra logic from scratch. 
+
+Part 1-Getting Started
+=>creating the virtual environment->"python -m venv path"
+=>installing package->
+1)pip install django
+2)python -m django --version
+=>if the above cmd runs then django was installed corectly.
+3)"django-admin" => this cmd will give us list of sub commands.
+4)to create a new project 
+ =>"django-admin startproject project_name"
+=>this cmd will create a project for us with project structure(i mean it contains the files and folder required to build a project)
+5)you can use "tree" cmd to see the structure
+6)to run the server ="python manage.py runsever"
+=>this cmd will run our website on server(here it is local host you can view a default website by django)
+7)"ctrl c" to stop the server
+
+
+Part 2-Applications and Routes
+=>Applications=> Here application mean different parts(like blog,profile,message frame) of the website
+=> routes => urls
+1) "python manage.py startapp appname" ->this cmd will create the dir(name=appname) which contains some other files and they are structured.
+2) then go to view.py of app and then define the fuctions which will conatins the logic needed to display on browser.
+3) create urls.py file which will conatins the routes
+4) Also specify about your apps urls.py to the project urls.py.#"include()"->this functions is used to chop the matched word of route and returns the unmatched one to the apps url.py
+5) you can add n number of paths by following step2 to step4.
+
+
+Part 3-Templates
+
+1)we create a templates to avoid mesh and steps to follow-
+  i)first create the template folder into the same dir
+  ii)create another director inside the template
+  iii)then create the html files inside it ..
+  and for css and js follow the similar steps and we are using bootstrap(library which apply the css and js and it gets loaded from cdn) and load into html file by using some tags
+  iv)template inheritence also need to be implemented to avoid the redundant.
+  v)we need to specify in appconfig into installed apps list of setting.py of project so that it will allow django to look for our  templates and also for models when we create the db.
+
+2)blog->templates->blog->templates.html
+apps.py => appconfig =>project's setting.py file we need to add path to the installed apps (list).
+=>Generally,the css and js are included statically with html code.it means they are written in the scripts or the link tag in the html code.
+
+
+Part 4- Admin page
+
+1)we need to visit the admin page 
+2)first create the super user ,cmd=>"python manage.py createsuperuser"->it not gone work it lead to error "no such table:auth_user",it mean we are not created the databae yet.
+3)we need to run some migrations commands =>basically is allows us make change to db=>first migration will create the db for us and some default table in it and allow us to run createsuperuser cmd.
+4)cmd=>"python manage.py makemigrations"->it detects the changes and prepare the django to make changes to the database.
+5)cmd=>"python manage.py migrate"=>to apply the migration
+6)rerun the cmd 2) now it woeks asks for credintials
+7)superuser was created and you can login into it,and django provide the awesome admin site by default.u can look it and here authorized user  can edit the database.
+
+Part 5-Database and Migration 
+   -> django uses ORM => object realtion mapping to deal with databases..which mean we can create the models buy using the class.
+   -> Here we learn how to create our own tables in the database
+   -> and how to query the db
+   -> and how we can use admin age and how to add the additional modle into the admin page (admin.py in it register the model to admin         page)..and also date formate look in django data fronate site .
+
+Part 6-User Registration :
+  -> Here we will learning how to use forms and validate user input by creating a user registeration page .we will also learn how to install and use crispy form so that  forms match the modern style  of our application .
+
+
+Part 7-Lohin and Logout System :
+  -> Here we will be learning how to create an aunthentication system for our application so that user cann login and logout.we are also goining to see how we can restrict certain pages so that users must be logged-in i  order to access the page.
+
+Part 8-User Profile and Picture:
+
+Here we will be creating a user profile that extends the built-in Django User model. We will then use this user profile to store profile pictures for each user. We will also be learning how to set the MEDIA_ROOT, MEDIA_URL, and also make our static files accessible through our URL patterns. Finally, we will create a receiver function for a Django signal that will make sure our profiles are created when a user first registers. 
+
+
+Part 9- Update User and Profile :
+
+Here we will learned how to update profile and resize the image...
+
+Part 10-Create ,Update and Delete Post:
+
+Here we learned how to use class based views in order to create,update,delete post.These class-based views are very convenient once we get used to using them properly.
+
+
+Part 11 - Pagination:
+
+we learn how to use pagination so that we aren't pulling down too many posts at once .we will also laern how to craete a page for posts created by specific user .
+
+
+Part 12 - Email and Password  Reset:
+
+here we learn how we can use email to send password reset link to a user so that user the user can reset the password .Users will be able to fill out a form with their email and have a unique token send to them ,and if their token is verified then they will be able to create  a new password.
+
+=>Creating enrionment variable => <control panel><system><advance setting><environment variable><New>create variale=value.
+
+
